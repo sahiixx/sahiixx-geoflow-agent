@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sahiixx-geoflow-agent"
+version = "0.1.0"
+description = "Generative Engine Optimization (GEO) for real estate — AI-citable content from listings"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+authors = [{name = "Sahiixx", email = "sahiixx@gmail.com"}]
+keywords = ["geo", "seo", "ai", "llm", "real-estate", "scraping", "content-generation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "requests>=2.28",
+    "beautifulsoup4>=4.11",
+    "lxml>=4.9",
+    "pydantic>=2.0",
+    "python-frontmatter>=1.0",
+    "jinja2>=3.1",
+    "neo4j>=5.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "black", "mypy"]
+scraping = ["selenium>=4.0", "webdriver-manager", "gspread", "oauth2client", "pandas"]
+
+[project.scripts]
+geoflow = "geoflow.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/sahiixx/sahiixx-geoflow-agent"
+Issues = "https://github.com/sahiixx/sahiixx-geoflow-agent/issues"

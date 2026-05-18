@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "sahiixx-geoflow-agent"
 version = "0.1.0"
-description = "Generative Engine Optimization (GEO) for real estate — AI-citable content from listings"
+description = "Generative Engine Optimization for real estate - AI-citable content from listings"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.12"
@@ -30,6 +30,7 @@ dependencies = [
     "python-frontmatter>=1.0",
     "jinja2>=3.1",
     "neo4j>=5.0",
+    "sahiixx-bus>=0.1.0",
 ]
 
 [project.optional-dependencies]

@@ -30,7 +30,9 @@ dependencies = [
     "python-frontmatter>=1.0",
     "jinja2>=3.1",
     "neo4j>=5.0",
-    "sahiixx-bus>=0.1.0",
+    "typer>=0.9",
+    "rich>=13.0",
+    "sahiixx-bus @ git+https://github.com/sahiixx/sahiixx-bus.git@901bd01eb920e91061c4dd3ffa16870df47596f8",
 ]
 
 [project.optional-dependencies]
@@ -43,3 +45,9 @@ geoflow = "geoflow.cli:main"
 [project.urls]
 Homepage = "https://github.com/sahiixx/sahiixx-geoflow-agent"
 Issues = "https://github.com/sahiixx/sahiixx-geoflow-agent/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/geoflow"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
